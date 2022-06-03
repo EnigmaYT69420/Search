@@ -1,34 +1,103 @@
-img {
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, san-serif;
+    font-size: 12pt; 
+    background: #282828;
+}
+ 
+#logo img {
+  float: left;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 10px;
+  width: 110px;
+}
+
+#search-nav {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 200px;
+  width: 110px;
+}
+
+#menu{
+    float:right;
+    width: 70%;
+    height: 100%;
+    margin: none;
+}
+
+#menu li{
+    display: inline-block;
+    padding: none;
+    margin: none;
+}
+  
+#menu li:hover a, #menu li span{
+    text-color:lime;
+    text-decoration: none;
+    opacity: 0.8;
+    transform: translateY(3px);
+    transition: 2s;    
+}
+
+#menu ul {
+    text-align: center;
+    float: right;
+    margin: none;
+}
+
+#menu li a, #menu li span {
+    display: inline-block;
+    padding: 0em 1.5em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+#menu li a{    
+    color: white;
+}
+
+#menu li:hover a, #menu li span{
+    color: lime;
+    border-right: 0.001px solid lime;
+    border-left: 0.001px solid lime;
+    border-top: 0.001px solid lime;
+    border-bottom: 0.001px solid lime;
+    text-decoration: none;
+}
+
+#images img {
   width: 150px;
   height: 200px;
-  border: 3px solid #101010;
+  border: 1px solid #FFFFFF;
   display: flex;
   flex-wrap: wrap;
   margin: 10px 10px;
   display: none;
-  
-}
-
-img:hover {
-  color: rgba(225,225,225,0.5)
-}
-
-body {
-  background: #282828;
-  min-width: 683px;
 }
 
 .buttonrow {
+  overflow: hidden;
+  position: absolute;
   display: flex;
-  background: #1cb023;
-  padding: 10px 10px;
+  background: #1CB023;
+  padding: 10px 10px; 
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 button {
   display: flex;
-  border: 1px solid #1bc023;
+  border: 1px solid #56E55E;
   background: transparent;
   color: white;
   font-size: 20px;
@@ -37,7 +106,7 @@ button {
 }
 
 button:hover {
-  color: #282828;
+  color: #101010;
   transform: scale(1.5);
   transition: 0.8s;
 }
@@ -49,9 +118,38 @@ button:active {
 #images {
   display: flex;
   overflow-x:scroll;
+  position: absoulute;
+}
+
+#images img:hover {
+  border: 3px solid #39ff14;
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 #show {
   border: 3px solid #1bc023;
   margin-left: 20px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5%;
+  background-color: #39FF14;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  display:none;
+  text-align:center;
+  color:white;
+}
+
+.boton {
+  border: 3px solid #1bc023;
+  margin: 0px 20px;
 }
